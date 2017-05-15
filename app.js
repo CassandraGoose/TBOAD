@@ -23,7 +23,7 @@ app.use(cors({
   ]
 }))
 
-app.use('/secrets', require('./routes/secrets'))
+app.use('/messages', require('./routes/podast'))
 
 app.use('*', function(req, res, next) {
     res.sendFile('index.html', {
