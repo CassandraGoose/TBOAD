@@ -10,15 +10,16 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body.url)
-  var thePodcast = {
-    url: req.body.url
+  console.log(req.body.text)
+  var theMessage = {
+    name: req.body.name,
+    text: req.body.text
   }
-  knex('podcast')
-    .insert(podcast)
-    .then(podcasts => {
-      console.log(podcasts);
-      res.json(podcasts);
+  knex('message')
+    .insert(theMessage)
+    .then(messages => {
+      console.log(messages);
+      res.json(messages);
     })
 })
 
