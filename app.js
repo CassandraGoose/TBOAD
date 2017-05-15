@@ -23,7 +23,7 @@ app.use(cors({
   ]
 }))
 
-app.use('/messages', require('./routes/podast'))
+app.use('/messages', require('./routes/podcast'))
 
 app.use('*', function(req, res, next) {
     res.sendFile('index.html', {
