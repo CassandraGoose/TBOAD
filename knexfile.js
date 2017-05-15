@@ -7,8 +7,8 @@ module.exports = {
     connection: 'postgres://localhost/podcasts'
   }
 
-  // production: {
-  //   client: 'pg',
-  //   connection: process.env.DATABASE_URL + '?ssl=true'
-  // }
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL + '?ssl=true'
+  }
 };
