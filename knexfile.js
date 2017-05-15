@@ -4,11 +4,11 @@ dotenv.config();
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/secrets'
-  },
-
-  production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL + '?ssl=true'
+    connection: 'postgres://localhost/podcasts'
   }
+
+  // production: {
+  //   client: 'pg',
+  //   connection: process.env.DATABASE_URL + '?ssl=true'
+  // }
 };

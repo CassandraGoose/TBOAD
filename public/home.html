@@ -1,25 +1,66 @@
-<main class="ink-grid align-center splashbackground">
-  <div class="spacer">
-  </div>
-  <section>
-  <div class="align-center">
-<p></p>
-</div>
-
-        <h2 class="above">i will store your secret and keep it safe.</h2>
-        <form name="secretForm" autocomplete="off" class="ink-form sidepad above bottom-space all-80 push-center" novalidate>
-          <div class="control-group all-100 small-100 tiny-100 align-center" ng-class="{ 'has-error': secretForm.$invalid }">
-            <div class="control append-button" role="search">
-                <span><input type="text" id="secret" name="secret" class="control" ng-minlength=5 placeholder="your secret here..." ng-model="$ctrl.secrets.text" required></span>
-                <button class="ink-button" ng-click="$ctrl.secretAdd()" ng-disabled="secretForm.$invalid" type="submit">submit</button>
-                <span class="error" ng-show="secretForm.secret.$dirty && secretForm.secret.$invalid">
-
+<main class="container">
+    <div class="tile is-ancestor">
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-dark">
+                <div class="content">
+                    <p class="title">Message Us About the Latest Episode!</p>
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input is-success" type="text" placeholder="Text input" value="Username">
+                            <span class="icon is-small is-left">
+                              <i class="fa fa-user"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                              <i class="fa fa-check"></i>
+                            </span>
+                        </p>
+                        <p class="help is-success">This username is available</p>
+                    </div>
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <p class="control">
+                            <textarea class="textarea" placeholder="Send us a message!"></textarea>
+                        </p>
+                    </div>
+                    <div class="content">
+                        <!-- Content -->
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="tile is-vertical is-8">
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-primary">
+                    <p class="title">Episode 1: Title here</p>
+                    <p class="subtitle">Meet the host and guest. Application process for Web Development Immersive.</p>
+                    <div class="content">
+                        <audio controls>
+              <source src="" type="audio/ogg">
+              <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+                    </div>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-primary">
+                    <p class="title">Episode 2: Coming Soon</p>
+                    <p class="subtitle">Info Coming Soon</p>
+                    <div class="content">
+                        <!-- Content -->
+                    </div>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-primary">
+                    <p class="title">Episode 3: Coming Soon</p>
+                    <p class="subtitle">Info Coming Soon</p>
+                    <div class="content">
+                        <!-- Content -->
+                    </div>
+                </article>
             </div>
         </div>
-
-        </form>
-        <div class="bottomsies">
-        </div>
-
-</section>
+    </div>
 </main>

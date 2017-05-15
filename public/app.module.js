@@ -4,11 +4,11 @@
     .component('home', {
       templateUrl: '/home.html',
       controller: "HomeController"
-    }).component('what', {
-      templateUrl: '/what.html',
-      controller: "WhatController"
-    }).component('itisdone', {
-      templateUrl: '/itisdone.html',
-      controller: "ItIsDoneController"
+    }).component('about', {
+      templateUrl: '/about.html',
+      controller: "AboutController"
+    }).component('contact', {
+      templateUrl: 'contact.html',
+      controller: "ContactController"
     })
 }())

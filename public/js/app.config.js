@@ -14,13 +14,13 @@
         url: '/',
         component: 'home'
       }).state({
-        name: 'what',
-        url: '/what',
-        component: 'what'
+        name: 'about',
+        url: '/about',
+        component: 'about'
       }).state({
-        name: 'itisdone',
-        url: '/itisdone',
-        component: 'itisdone'
+        name: 'contact',
+        url: '/contact',
+        component: 'contact'
       })
     $urlRouterProvider.otherwise('/')
   }
