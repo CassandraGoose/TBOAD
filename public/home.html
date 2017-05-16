@@ -2,7 +2,12 @@
     <div class="tile is-ancestor">
         <div class="tile is-parent">
           <form name="messageForm" novalidate>
-            <article class="tile is-child notification is-dark">
+            <article class="tile is-child notification is-dark behind">
+                <div class="content">
+                    <p class="title">Thanks!</p>
+                </div>
+            </article>
+            <article class="tile is-child notification is-dark" ng-init="isFormOpen = true" ng-show="isFormOpen">
                 <div class="content">
                     <p class="title">Message Us About the Latest Episode!</p>
                     <div class="field">
@@ -25,7 +30,7 @@
                         </p>
                     </div>
                     <div class="block">
-                      <button class="button is-light" ng-click="$ctrl.messageAdd()" ng-disabled="messageForm.$invalid" type="submit">Submit</button>
+                      <button class="button is-light" ng-click="$ctrl.messageAdd()" ng-disabled="messageForm.$invalid" type="submit"><p ng-click="isFormOpen = !isFormOpen">Submit</p></button>
                       </div>
                   </form>
 

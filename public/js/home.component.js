@@ -5,7 +5,7 @@ angular
 function HomeController($http, $stateParams, $state) {
   const vm = this
   vm.messageAdd = messageAdd
-  
+
   vm.$onInit = function() {
 
     console.log("hello from home component");
