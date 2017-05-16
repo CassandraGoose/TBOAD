@@ -8,7 +8,7 @@
                     <div class="field">
                         <label class="label">Name</label>
                         <p class="control has-icons-left has-icons-right">
-                            <input class="input is-success" type="text" ng-model="$ctrl.message.name" placeholder="What's your name?" value="Username">
+                            <input class="input is-success" type="text" ng-model="$ctrl.message.name" placeholder="What's your name?" value="Username" required>
                             <span class="icon is-small is-left">
                               <img src="images/id-card.png">
                             </span>
@@ -21,11 +21,11 @@
                     <div class="field">
                         <label class="label">Message</label>
                         <p class="control">
-                            <textarea class="textarea" ng-model="$ctrl.message.text" placeholder="Send us a message!"></textarea>
+                            <textarea class="textarea" ng-model="$ctrl.message.text" placeholder="Send us a message!" required></textarea>
                         </p>
                     </div>
                     <div class="block">
-                      <a class="button is-light" ng-click="$ctrl.addMessage()" type="submit">Submit</a>
+                      <button class="button is-light" ng-click="$ctrl.messageAdd()" ng-disabled="messageForm.$invalid" type="submit">Submit</button>
                       </div>
                   </form>
 
