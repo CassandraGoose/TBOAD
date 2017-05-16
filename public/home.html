@@ -1,15 +1,16 @@
 <main class="container">
     <div class="tile is-ancestor">
         <div class="tile is-parent">
+          <form name="messageForm" novalidate>
             <article class="tile is-child notification is-dark">
                 <div class="content">
                     <p class="title">Message Us About the Latest Episode!</p>
                     <div class="field">
-                        <label class="label">Username</label>
+                        <label class="label">Name</label>
                         <p class="control has-icons-left has-icons-right">
-                            <input class="input is-success" type="text" placeholder="Text input" value="Username">
+                            <input class="input is-success" type="text" ng-model="$ctrl.message.name" placeholder="What's your name?" value="Username">
                             <span class="icon is-small is-left">
-                              <i class="fa fa-user"></i>
+                              <img src="images/id-card.png">
                             </span>
                             <span class="icon is-small is-right">
                               <i class="fa fa-check"></i>
@@ -20,13 +21,15 @@
                     <div class="field">
                         <label class="label">Message</label>
                         <p class="control">
-                            <textarea class="textarea" placeholder="Send us a message!"></textarea>
+                            <textarea class="textarea" ng-model="$ctrl.message.text" placeholder="Send us a message!"></textarea>
                         </p>
                     </div>
-                    <div class="content">
-                        <!-- Content -->
-                    </div>
-                </div>
+                    <div class="block">
+                      <a class="button is-light" ng-click="$ctrl.addMessage()" type="submit">Submit</a>
+                      </div>
+                  </form>
+
+
             </article>
         </div>
         <div class="tile is-vertical is-8">

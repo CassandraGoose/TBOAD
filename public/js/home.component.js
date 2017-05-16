@@ -11,19 +11,16 @@ function HomeController($http, $stateParams, $state) {
   }
 
 
-  function podcastAdd() {
-    // $http.post("http://thesecretkeeper.herokuapp.com/secrets", {
-    //     text: vm.secrets.text
-    //   })
-    //   .then(function(response) {
-    //     $state.go('itisdone')
-    //   })
 
-    // $http.post('http://127.0.0.1:3000/secrets', {
-    //     what: 'the fuck'
-    //   })
-    //   .then(function(response) {
-    //     console.log(response)
-    //   })
-  }
+    function messageAdd() {
+console.log("message add function");
+      $http.post("http://tboadpodcast.herokuapp.com/messages", {
+          name: vm.message.name,
+          text: vm.message.text
+        })
+        .then(function(response) {
+          console.log('done!');
+        })
+
+    }
 }
