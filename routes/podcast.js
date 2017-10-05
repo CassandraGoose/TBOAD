@@ -5,7 +5,7 @@ const knex = require('../db')
 router.get('/', (req, res) => {
   console.log('hello from get');
   res.status(200).json({
-    hello: 'hello podcast get'
+    hello: 'status200'
   })
 })
 
@@ -18,7 +18,6 @@ router.post('/', (req, res) => {
   knex('message')
     .insert(theMessage)
     .then(messages => {
-      console.log(messages);
       res.json(messages);
     })
 })
